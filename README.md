@@ -1,2 +1,2 @@
 # Eagercraft-Launcher
-Eaglercrafts
+Eaglercraft and more
