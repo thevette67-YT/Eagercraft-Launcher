@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eaglercraft Launcher</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Orbitron',sans-serif;
+    overflow-y:auto;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 0;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    transition: background-image 1.5s ease-in-out;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
+    background-size:90px 90px;
+    background-position:0 0,45px 45px;
+    opacity:.2;
+    animation:moveStars 120s linear infinite;
+}
+
+@keyframes moveStars{
+from{transform:translateY(0);}
+to{transform:translateY(-1000px);}
+}
+
+.launcher{
+    width:900px;
+    max-width:95%;
+    padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 0 70px rgba(0,255,255,.15);
+    max-height:90vh;
+    overflow-y:auto;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    font-size:55px;
+    margin-bottom:10px;
+    text-shadow:0 0 20px cyan;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cfd8dc;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    position:relative;
+    padding:25px;
+    border-radius:20px;
+    color:white;
+    cursor:pointer;
+    transition:.35s;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,rgba(255,255,255,.2),transparent);
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.04);
+}
+
+.card h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#d7d7d7;
+    margin-bottom:30px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.play{
+    display:inline-block;
+    background:white;
+    color:black;
+    padding:12px 28px;
+    border-radius:50px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.card:hover .play{
+    transform:scale(1.08);
+}
+
+.v188{
+background:linear-gradient(135deg,#00c853,#00e676);
+box-shadow:0 0 30px #00e67666;
+}
+
+.v112{
+background:linear-gradient(135deg,#2979ff,#00b0ff);
+box-shadow:0 0 30px #00b0ff66;
+}
+
+.v116{
+background:linear-gradient(135deg,#8e24aa,#e040fb);
+box-shadow:0 0 30px #d500f966;
+}
+
+.footer{
+margin-top:35px;
+text-align:center;
+color:#94a3b8;
+font-size:13px;
+letter-spacing:2px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="launcher">
+
+<h1>Eaglercraft n best servers</h1>
+<div class="subtitle">wss://bedwetr.bytommy.uk|wss://aeon-network.net/aeon|wss://zentic.cc|wss://arch.mc/server|wss://ethereal.mov</div>
+
+<div class="grid">
+
+<div class="card v112" onclick="location.href='Eaglercraft 1.8.8.html'">
+<h2>1.8.8</h2>
+<p>100% stable on all devices</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft 1.12.2.html'">
+<h2>1.12.2</h2>
+<p>May need to change settings to decrease the lag if on Chromebook</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft 1.16.5.html'">
+<h2>1.16.5</h2>
+<p>Need a beefy computer</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft ultimate.html'">
+<h2>ultimate</h2>
+<p>Ultimate mods</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft skyfactory.html'">
+<h2>Skyfactory</h2>
+<p>Skyfactory mods</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft weird-chest-thing.html'">
+<h2>weird chest thing</h2>
+<p>chest mods</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft wisp.html'">
+<h2>Wispcraft</h2>
+<p>IDK wut this is</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft pixel.html'">
+<h2>Pixelcraft</h2>
+<p>IDK wut this is</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft indev.html'">
+<h2>Indev</h2>
+<p>IDK wut this is</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft eagly.html'">
+<h2>EaglyMC</h2>
+<p>IDK wut this is</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft star.html'">
+<h2>StarLike</h2>
+<p>IDK wut this is</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft classic.html'">
+<h2>Classic Eaglercraft</h2>
+<p>the first</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft alpha1.2.6.html'">
+<h2>Alpha Eaglercraft</h2>
+<p>the first Minecraft</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft beta1.7.3.html'">
+<h2>Beta Eaglercraft</h2>
+<p>1.7.3</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft horror.html'">
+<h2>Eaglercraft horror mod</h2>
+<p>Winston Horror Mod</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Eaglercraft tuff.html'">
+<h2>tuff client</h2>
+<p>remodel i think</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Emojilet.html'">
+<h2>rip-off blooket</h2>
+<p>-----EXTRA-----</p>
+<div class="play">PLAY</div>
+</div>
+
+<div class="card v112" onclick="location.href='Gamez4bcc.html'">
+<h2>some unblocked games</h2>
+<p>-----EXTRA-----</p>
+<div class="play">PLAY</div>
+</div>
+    
+</div>
+
+<div class="footer">
+Made by thevette67_YT
+</div>
+
+</div>
+
+<script>
+const backgrounds = [
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+    "7.png",
+    "8.png",
+    "9.png",
+    "10.png",
+    "11.png",
+    "12.png",
+    "13.png",
+    "14.png",
+    "15.png",
+    "16.png",
+    "17.png",
+    "18.png",
+    "19.png"
+];
+
+function changeBackground() {
+    const random = Math.floor(Math.random() * backgrounds.length);
+
+    document.body.style.backgroundImage =
+    `linear-gradient(rgba(255,255,255,.08), rgba(0,0,0,.15)), url('${backgrounds[random]}')`;
+
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundAttachment = "fixed";
+}
+
+changeBackground();
+setInterval(changeBackground, 10000);
+</script>
+
+</body>
+</html>
