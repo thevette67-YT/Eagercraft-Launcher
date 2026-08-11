@@ -1,2 +1,2 @@
 # Eagercraft-Launcher
-Eaglercraft and more
+To play download everything and open index.html to access Eaglercraft and more
